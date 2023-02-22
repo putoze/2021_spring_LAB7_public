@@ -1,0 +1,130 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : PN
+Version: N-2017.09-SP2
+Date   : Thu Jul 28 11:06:29 2022
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: mode (input port clocked by clk_1)
+  Endpoint: M1/mode_r_reg
+            (rising edge-triggered flip-flop clocked by clk_1)
+  Path Group: clk_1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk_1 (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    12.05      12.05 r
+  mode (in)                                0.00      12.05 r
+  U1896/Y (AND3X1)                         0.17      12.22 r
+  M1/mode_r_reg/D (DFFRX1)                 0.00      12.22 r
+  data arrival time                                  12.22
+
+  clock clk_1 (rise edge)                 19.00      19.00
+  clock network delay (ideal)              0.00      19.00
+  M1/mode_r_reg/CK (DFFRX1)                0.00      19.00 r
+  library setup time                      -0.23      18.77
+  data required time                                 18.77
+  -----------------------------------------------------------
+  data required time                                 18.77
+  data arrival time                                 -12.22
+  -----------------------------------------------------------
+  slack (MET)                                         6.55
+
+
+  Startpoint: M2/data_a_r_reg[2]
+              (rising edge-triggered flip-flop clocked by clk_2)
+  Endpoint: M2/data_a_r_reg[31]
+            (rising edge-triggered flip-flop clocked by clk_2)
+  Path Group: clk_2
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk_2 (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  M2/data_a_r_reg[2]/CK (DFFRX1)           0.00       0.00 r
+  M2/data_a_r_reg[2]/Q (DFFRX1)            0.43       0.43 r
+  U116/Y (CLKBUFX8)                        0.23       0.66 r
+  U3188/Y (NOR2XL)                         0.10       0.76 f
+  U3341/Y (NOR2XL)                         0.12       0.88 r
+  U942/Y (AOI21XL)                         0.14       1.02 f
+  U264/Y (OAI21X2)                         0.15       1.17 r
+  U263/Y (AOI21X1)                         0.10       1.28 f
+  U382/Y (OAI21XL)                         0.26       1.53 r
+  U299/Y (AOI21XL)                         0.18       1.71 f
+  U3355/Y (OAI21X1)                        0.19       1.91 r
+  U3356/Y (AOI21X1)                        0.13       2.03 f
+  U3466/Y (OAI21X1)                        0.18       2.21 r
+  U3468/Y (AOI21X1)                        0.13       2.34 f
+  U3469/Y (OAI21X1)                        0.18       2.51 r
+  U3512/Y (AOI21X1)                        0.13       2.64 f
+  U3515/Y (OAI21X1)                        0.18       2.81 r
+  U3516/Y (AOI21X1)                        0.13       2.94 f
+  U3665/Y (OAI21X1)                        0.16       3.10 r
+  U600/Y (AOI21XL)                         0.13       3.24 f
+  U614/Y (OAI21XL)                         0.27       3.50 r
+  U615/Y (AOI21XL)                         0.16       3.67 f
+  U1777/Y (OAI21XL)                        0.28       3.94 r
+  U1042/Y (AOI21XL)                        0.17       4.11 f
+  U1057/Y (OAI21XL)                        0.28       4.39 r
+  U1058/Y (AOI21XL)                        0.16       4.55 f
+  U1054/Y (OAI21XL)                        0.28       4.83 r
+  U605/Y (AOI21XL)                         0.17       5.00 f
+  U3776/Y (OAI21XL)                        0.28       5.27 r
+  U1198/Y (AOI21XL)                        0.14       5.41 f
+  U3926/Y (XOR2X1)                         0.11       5.52 r
+  U141/Y (NAND2XL)                         0.08       5.60 f
+  U499/Y (NAND4XL)                         0.15       5.76 r
+  M2/data_a_r_reg[31]/D (DFFRX1)           0.00       5.76 r
+  data arrival time                                   5.76
+
+  clock clk_2 (rise edge)                  6.00       6.00
+  clock network delay (ideal)              0.00       6.00
+  M2/data_a_r_reg[31]/CK (DFFRX1)          0.00       6.00 r
+  library setup time                      -0.24       5.76
+  data required time                                  5.76
+  -----------------------------------------------------------
+  data required time                                  5.76
+  data arrival time                                  -5.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: M3/out_reg[51]
+              (rising edge-triggered flip-flop clocked by clk_3)
+  Endpoint: out[31] (output port clocked by clk_3)
+  Path Group: clk_3
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk_3 (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  M3/out_reg[51]/CK (DFFRX1)               0.00       0.00 r
+  M3/out_reg[51]/QN (DFFRX1)               0.89       0.89 r
+  U1598/Y (INVX1)                          0.48       1.37 f
+  out[31] (out)                            0.00       1.37 f
+  data arrival time                                   1.37
+
+  clock clk_3 (rise edge)                 11.00      11.00
+  clock network delay (ideal)              0.00      11.00
+  output external delay                   -5.50       5.50
+  data required time                                  5.50
+  -----------------------------------------------------------
+  data required time                                  5.50
+  data arrival time                                  -1.37
+  -----------------------------------------------------------
+  slack (MET)                                         4.13
+
+
+1
